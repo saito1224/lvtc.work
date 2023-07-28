@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 
+dev_basis02
 class PostController extends Controller
 {
     public function index(Post $post)
@@ -13,3 +14,14 @@ class PostController extends Controller
 }
     
 }
+
+
+
+class PostController extends Controller
+{
+    public function index(Post $post){
+        return $post->get();
+    }
+    
+}
+ master
