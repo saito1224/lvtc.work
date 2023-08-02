@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
- dev_basis02
+
     
 
 class Post extends Model
@@ -19,11 +19,7 @@ class Post extends Model
 }
     public function getByLimit(int $limit_count = 10){
         return $this -> orderBy('updated_at','DESC') -> limit($limit_count)->get();
-  
+    }  
 }
 
-class Post extends Model
-{
-    use HasFactory;
- master
-}
+
