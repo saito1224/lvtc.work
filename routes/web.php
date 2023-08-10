@@ -14,11 +14,9 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
-Route::get('/posts/{post}', [PostController::class ,'show']);
 Route::get('/', [PostController::class, 'index']); 
-Route::get('/create',[PostController::class,'create']);
-
-
+Route::post('/posts',[PostController::class,'store']);
+Route::get('/posts/create',[PostController::class,'create']);
+Route::put('/posts/{post}', [PostController::class, 'update']);
+Route::get('/posts/{post}', [PostController::class ,'show']);
+Route::get('/posts/{post}/edit',[PostController::class,'edit']);
